@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="technical_doc.css">
+</head>
+<body>
+        <nav id="navbar">
+            <header>C++ Documentation</header>
+            <ul id="navbar-list">
+                <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                <li><a class="nav-link" href="#C_and_C++">C and C++</a></li>
+                <li><a class="nav-link" href="#Hello_world">Hello World</a></li>
+                <li><a class="nav-link" href="#Variables">Variables</a></li>
+                <li><a class="nav-link" href="#Conditions">Conditions</a></li>
+                <li><a class="nav-link" href="#Loops">Loops</a></li>
+            </ul>
+        </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>C++ is one of the world's most popular programming languages.</p>
+                <p>C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.</p>
+                <p>C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
+                <p>C++ is fun and easy to learn!</p>
+            </article>
+            
+        </section>
+        <section class="main-section" id="C_and_C++">
+            <header>C and C++</header>
+            <p>C++ was developed as an extension of C, and both languages have almost the same syntax.</p>
+            <p>The main difference between C and C++ is that C++ support classes and objects, while C does not.</p>
+        </section>
+        <section class="main-section" id="Hello_world">
+            <header>Hello World</header>
+            <pre>
+                <code>
+                    #include < iostream >
+                        using namespace std;
+                        
+                        int main() {
+                          cout << "Hello World!";
+                          return 0;
+                        }
+                </code>
+            </pre>
+            <ul><p class="example">Example explained:</p>
+                <li><span class="bold">Line 1:</span> #include <iostream> is a header file library that lets us work with input and output objects, such as cout (used in line 5). Header files add functionality to C++ programs.</li>
+                <li><span class="bold">Line 2:</span> using namespace std means that we can use names for objects and variables from the standard library.</li>
+                <li><span class="bold">Line 4:</span> Another thing that always appear in a C++ program is int main(). This is called a function. Any code inside its curly brackets {} will be executed.</li>
+                <li><span class="bold">Line 5:</span> cout (pronounced "see-out") is an object used together with the insertion operator (<<) to output/print text. In our example, it will output "Hello World!".</li>
+                <li><span class="bold">Note:</span> Every C++ statement ends with a semicolon ;.</li>
+                <li><span class="bold">Line 6:</span> return 0 ends the main function.</li>
+                <li><span class="bold">Line 7:</span> Do not forget to add the closing curly bracket } to actually end the main function.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>Variables are containers for storing data values.</p>
+            <ul><p>In C++, there are different types of variables (defined with different keywords), for example:</p>
+                <li><span class="bold-variables">int</span> -  stores integers (whole numbers), without decimals, such as 123 or -123</li>
+                <li><span class="bold-variables">double</span> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+                <li><span class="bold-variables">char</span> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+                <li><span class="bold-variables">string</span> - stores text, such as "Hello World". String values are surrounded by double quotes</li>
+                <li><span class="bold-variables">bool</span> - stores values with two states: true or false</li>
+            </ul>
+            <h3>*Declaring Variables*</h3>
+            <code>type variableName = value;</code>
+            <p class="example">Examples:</p>
+            <p>variable called myNum of type int and assign it the value 15:</p>
+            <code>int myNum = 15;</code>
+            <p>You can also declare a variable without assigning the value, and assign the value later:</p>
+            <pre><code>
+                int myNum;
+                myNum = 15;
+            </code></pre>
+        </section>
+        <section class="main-section" id="Conditions">
+            <header>Conditions</header>
+            <p>You can use conditions to perform different actions for different decisions.</p>
+            <ul><p>C++ has the following conditional statements:</p>
+            <li>Use <span class="bold-variables">if</span> to specify a block of code to be executed, if a specified condition is true</li>
+            <li>Use <span class="bold-variables">else</span> to specify a block of code to be executed, if the same condition is false</li>
+            <li>Use <span class="bold-variables">else if</span> to specify a new condition to test, if the first condition is false</li>
+            <li>Use <span class="bold-variables">switch</span> to specify many alternative blocks of code to be executed</li>
+        </ul>
+        <h3>1-The if Statement Syntax</h3>
+        <pre>
+        <code>if (condition) {
+            // block of code to be executed if the condition is true
+          }</code></pre>
+          <p class="example">Example:</p>
+          <pre>
+            <code>
+                if (20 > 18) {
+                    cout << "20 is greater than 18";
+                }
+            </code>
+          </pre>
+        <h3>2-The else Statement Syntax</h3>
+        <pre>
+            <code>
+                if (condition) {
+                    // block of code to be executed if the condition is true
+                  } else {
+                    // block of code to be executed if the condition is false
+                  }
+            </code>
+        </pre>
+        <p class="example">Example:</p>
+        <pre>
+            <code>
+                int time = 20;
+                if (time < 18) {
+                    cout << "Good day.";
+                } else {
+                    cout << "Good evening.";
+                }
+            </code>
+        </pre>
+        <h3>3-The else if Statement Syntax</h3>
+        <pre>
+            <code>
+                if (condition1) {
+                    // block of code to be executed if condition1 is true
+                  } else if (condition2) {
+                    // block of code to be executed if the condition1 is false and condition2 is true
+                  } else {
+                    // block of code to be executed if the condition1 is false and condition2 is false
+                  }
+            </code>
+        </pre>
+        <p class="example">Example:</p>
+        <pre>
+            <code>
+                int time = 22;
+                if (time < 10) {
+                    cout << "Good morning.";
+                } else if (time < 20) {
+                  cout << "Good day.";
+                } else {
+                  cout << "Good evening.";
+                }
+            </code>
+        </pre>
+        <h3>4-The switch Statement Syntax</h3>
+        <pre>
+            <code>
+                switch(expression) {
+                    case x:
+                      // code block
+                      break;
+                    case y:
+                      // code block
+                      break;
+                    default:
+                      // code block
+                  }
+            </code>
+        </pre>
+        <p class="example">Example:</p>
+        <pre>
+            <code>
+                int day = 4;
+                switch (day) {
+                  case 1:
+                    cout << "Monday";
+                    break;
+                  case 2:
+                    cout << "Tuesday";
+                    break;
+                  case 3:
+                    cout << "Wednesday";
+                    break;
+                  case 4:
+                    cout << "Thursday";
+                    break;
+                  case 5:
+                    cout << "Friday";
+                    break;
+                  case 6:
+                    cout << "Saturday";
+                    break;
+                  case 7:
+                    cout << "Sunday";
+                    break;
+                }
+            </code>
+        </pre>
+        </section>
+        <section class="main-section" id="Loops">
+            <header>Loops</header>
+            <p>Loops can execute a block of code as long as a specified condition is reached.</p>
+            <p>Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+            <h3>1-While Loop</h3>
+            <p>It loops through a block of code as long as a specified condition is true</p>
+            <pre>
+                <code>
+                    while (condition) {
+                        // code block to be executed
+                      }
+                </code>
+            </pre>
+        <p class="example">Example:</p>
+        <p>In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:</p>
+        <pre>
+            <code>
+                int i = 0;
+                while (i < 5) {
+                  cout << i << "\n";
+                  i++;
+                }
+            </code>
+        </pre>
+        <h3>2-Do While Loop</h3>
+        <p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+        <pre>
+            <code>
+                do {
+                    // code block to be executed
+                  }
+                  while (condition);
+            </code>
+        </pre>
+        <p class="example">Example:</p>
+        <p>The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:</p>
+        <pre>
+            <code>
+                int i = 0;
+                do {
+                  cout << i << "\n";
+                  i++;
+                }
+                while (i < 5);
+            </code>
+        </pre>
+        <h3>3-For Loop</h3>
+        <p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
+        <pre>
+            <code>
+                for (statement 1; statement 2; statement 3) {
+                    // code block to be executed
+                  }
+            </code>
+        </pre>
+        <p><span class="bold">Statement 1</span> is executed (one time) before the execution of the code block.</p>
+        <p><span class="bold">Statement 2</span> defines the condition for executing the code block.</p>
+        <p><span class="bold">Statement 3</span> is executed (every time) after the code block has been executed.</p>
+        <p class="example">Example:</p>
+        <p>The example below will print the numbers 0 to 4:</p>
+        <pre>
+            <code>
+                for (int i = 0; i < 5; i++) {
+                    cout << i << "\n";
+                  }
+            </code>
+        </pre>
+        </section>
+    </main>
+</body>
+</html>

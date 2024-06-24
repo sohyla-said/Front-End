@@ -15,3 +15,6 @@ project 4 TODO list:
 
 project 5 Product Landing Page:
   technologies used -> html ,css.
+
+  project 6 my Portfolio page:
+    technologies used -> html ,css.
